@@ -12,7 +12,6 @@ from transformers import BertConfig, BertForTokenClassification
 from transformers import BertTokenizer, MegatronBertForTokenClassification, MegatronBertConfig
 from transformers import Trainer, TrainingArguments
 
-
 import scipy
 import torch
 import math
@@ -165,17 +164,10 @@ def main(argv):
         print("")
         print("Results with {}".format(method_names[i]))
         c = conlleval.evaluate(lines_ensemble)
-        ####### Test code for file writing #######
-        #of = f'output/{args.output_file}-{method_names[i]}-test.tsv'
-        #with open(of,'w+') as f:
-        #    f.writelines(lines_ensemble)
-        ####### Test code ends ######
         print("")
         conlleval.report(c)
         results.append([conlleval.metrics(c)[0].prec, conlleval.metrics(c)[0].rec, conlleval.metrics(c)[0].fscore])
         m_names.extend(method_names)
-
-        
 
 
     result_file = "results/results-{}.csv".format(args.output_file)
