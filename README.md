@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/604544128.svg)](https://zenodo.org/badge/latestdoi/604544128)
 # S1000-transformer-ner
 S1000 NER training for transformer models
 
