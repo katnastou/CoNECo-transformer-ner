@@ -22,7 +22,7 @@ python3 ner_hf_trainer.py \
     --train_data "$train_file" \
     --test_data "$test_file" \
     --model_name "$model" \
-    --ner_model_dir "ner-models/s1000" \
+    --ner_model_dir "ner-models/coneco" \
     --cache_dir "transformers-models" \
     --output_file "output" \
     --predict_position 0 \
